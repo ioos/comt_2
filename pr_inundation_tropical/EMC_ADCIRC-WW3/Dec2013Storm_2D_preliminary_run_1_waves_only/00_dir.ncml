@@ -1,0 +1,7 @@
+   <netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2">
+    <aggregation type="union">
+       <scan location="Output/" regExp=".*ww3\.[0-9]{8}.*\.nc$" 
+            subdirs="false"/>
+    </aggregation>
+   </netcdf> 
+

@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2 http://www.unidata.ucar.edu/schemas/thredds/InvCatalog.1.0.4.xsd"
+    xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2"
+    location="Output/trim-ike.nc">
+    <dimension name="time" length="127"/>
+    <dimension name="time_bounds" length="2"/>
+    <dimension name="m" length="179"/>
+    <dimension name="n" length="129"/>
+    <dimension name="bounds4" length="4"/>
+    <dimension name="Layer" length="1"/>
+    <dimension name="LayerInterf" length="2"/>
+    <dimension name="grid_m" length="180"/>
+    <dimension name="grid_n" length="130"/>
+    <dimension name="bounds2" length="2"/>
+    <attribute name="title" value="NetCDF created from NEFIS-file trim-ike.dat"/>
+    <attribute name="institution" value=""/>
+    <attribute name="source" value="Delft3D trim file"/>
+    <attribute name="history"
+        value="Original filename: trim-ike.dat, Deltares, FLOW2D3D Version 5.01.00.2350, Mar 13 2013, 15:39:06, file version: 3.54.29, file date:2013-04-04 15:21:00, transformation to netCDF: $HeadURL: https://svn.oss.deltares.nl/repos/openearthtools/trunk/matlab/applications/delft3d/vs_trim2nc.m $ $Id: vs_trim2nc.m 10615 2014-04-28 10:03:00Z boer_g $"/>
+    <attribute name="references" value="http://svn.oss.deltares.nl"/>
+    <attribute name="email" value=""/>
+    <attribute name="comment" value=""/>
+    <attribute name="version"
+        value="Deltares, FLOW2D3D Version 5.01.00.2350, Mar 13 2013, 15:39:06, file version: 3.54.29"/>
+    <attribute name="Conventions" value="CF-1.6"/>
+    <attribute name="terms_for_use"
+        value="These data can be used freely for research purposes provided that the following source is acknowledged: "/>
+    <attribute name="disclaimer"
+        value="This data is made available in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE."/>
+    <attribute name="delft3d_description"
+        value="                              &#xA;                              &#xA;                              &#xA;                              &#xA;                              &#xA;                              &#xA;                              &#xA;                              &#xA;                              &#xA;                              &#xA;"/>
+    <attribute name="time_coverage_start" value="2008-09-09T00:00"/>
+    <attribute name="time_coverage_end" value="2008-09-14T06:00"/>
+    <attribute name="geospatial_lat_min" type="double" value="18.149999618530273"/>
+    <attribute name="geospatial_lat_max" type="double" value="30.75"/>
+    <attribute name="geospatial_lat_units" value="dergees_north"/>
+    <attribute name="geospatial_lon_min" type="double" value="-97.8499984741211"/>
+    <attribute name="geospatial_lon_max" type="double" value="-80.25"/>
+    <attribute name="geospatial_lon_units" value="dergees_east"/>
+    <attribute name="geospatial_vertical_min" type="double" value="-67.0625"/>
+    <attribute name="geospatial_vertical_max" type="double" value="7146.62353515625"/>
+    <attribute name="geospatial_vertical_units" value="m"/>
+    <attribute name="geospatial_vertical_positive" value="down"/>
+    <variable name="time" shape="time" type="double">
+        <attribute name="standard_name" value="time"/>
+        <attribute name="long_name" value="time"/>
+        <attribute name="units" value="days since 1970-01-01 00:00:00 "/>
+        <attribute name="axis" value="T"/>
+        <attribute name="delft3d_name"
+            value="map-info-series:ITMAPC map-const:ITDATE map-const:DT map-const:TUNIT"/>
+        <attribute name="actual_range" type="double" value="14131.0 14136.25"/>
+        <!--<attribute name="bounds" value="time_bounds" />-->
+        <remove type="attribute" name="bounds"/>
+    </variable>
+    <variable name="time_bounds" shape="time_bounds time" type="double">
+        <attribute name="long_name" value="time bounds"/>
+        <attribute name="actual_range" value="2008-09-09 00:00:00&#x9;2008-09-14 06:00:00"/>
+    </variable>
+    <remove type="variable" name="m"/>
+    <remove type="variable" name="n"/>
+    <variable name="grid_longitude" shape="m n bounds4" type="float">
+        <!--<attribute name="standard_name" value="longitude"/>-->
+        <attribute name="long_name" value="grid cell corners, longitude-bounds"/>
+        <attribute name="units" value="degrees_east"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="-97.9000015258789 0.0"/>
+        <attribute name="delft3d_name" value="map-const:XCOR map-const:CODB map-const:COORDINATES"/>
+        <remove type="attribute" name="axis"/>
+        <remove type="attribute" name="standard_name"/>
+    </variable>
+    <variable name="grid_latitude" shape="m n bounds4" type="float">
+      
+        <!--<attribute name="standard_name" value="latitude"/>-->
+        <attribute name="long_name" value="grid cell corners, latitude-bounds"/>
+        <attribute name="units" value="degrees_north"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="0.0 30.799999237060547"/>
+        <attribute name="delft3d_name" value="map-const:YCOR map-const:CODB map-const:COORDINATES"/>
+        <remove type="attribute" name="axis"/>
+        <remove type="attribute" name="standard_name"/>
+    </variable>
+    <variable name="k" shape="Layer" type="float">
+        <attribute name="long_name" value="layer index"/>
+        <attribute name="units" value="1"/>
+        <attribute name="axis" value="Z"/>
+
+        <attribute name="comment"
+            value="The surface layer has index k=1, the bottom layer has index kmax."/>
+        <attribute name="delft3d_name" value="map-const:KMAX map-const:LAYER_MODEL"/>
+        <remove type="attribute" name="positive"/>
+    </variable>
+    <variable name="Layer" shape="Layer" type="float">
+        <attribute name="long_name" value="sigma at layer midpoints"/>
+        <attribute name="standard_name" value="ocean_sigma_coordinate"/>
+        <attribute name="positive" value="up"/>
+        <attribute name="formula_terms" value="sigma: Layer eta: waterlevel depth: depth"/>
+        <attribute name="actual_range" type="double" value="-0.5 -0.5"/>
+        <attribute name="comment"
+            value="The surface layer has index k=1 and is sigma=0, the bottom layer has index kmax and is sigma=-1."/>
+        <attribute name="delft3d_name" value="map-const:KMAX map-const:LAYER_MODEL map-const:THICK"
+        />
+    </variable>
+    <variable name="LayerInterf" shape="LayerInterf" type="float">
+        <attribute name="long_name" value="sigma at layer interfaces"/>
+        <attribute name="standard_name" value="ocean_sigma_coordinate"/>
+        <attribute name="positive" value="up"/>
+        <attribute name="formula_terms" value="sigma: LayerInterf eta: waterlevel depth: depth"/>
+        <attribute name="actual_range" type="double" value="-1.0 0.0"/>
+        <attribute name="comment"
+            value="The surface layer has index k=1 and is sigma=0, the bottom layer has index kmax and is sigma=-1."/>
+        <attribute name="delft3d_name" value="map-const:KMAX map-const:LAYER_MODEL map-const:THICK"
+        />
+    </variable>
+    <variable name="grid_depth" shape="grid_m grid_n" type="float">
+        <attribute name="standard_name" value="sea_floor_depth_below_sea_level"/>
+        <attribute name="long_name" value="depth of cell corners"/>
+        <attribute name="units" value="m"/>
+
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="NaN NaN"/>
+        <attribute name="delft3d_name"
+            value="map-const:DP map-const:DP0 map-const:DPS map-const:DRYFLP"/>
+        <attribute name="comment" value=""/>
+        <remove type="attribute" name="positive"/>
+    </variable>
+    <variable name="longitude" shape="m n" type="float">
+        
+        <attribute name="standard_name" value="longitude"/>
+        <attribute name="long_name" value="grid cell centers, longitude-coordinate"/>
+        <attribute name="units" value="degrees_east"/>
+        <attribute name="axis" value="X"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="-97.8499984741211 -80.25"/>
+        <attribute name="delft3d_name"
+            value="map-const:XZ map-const:KCS map-const:CODW map-const:COORDINATES"/>
+        <!--<attribute name="bounds" value="grid_longitude" />-->
+        <remove type="attribute" name="bounds"/>
+    </variable>
+    <variable name="latitude" shape="m n" type="float">
+        
+        <attribute name="standard_name" value="latitude"/>
+        <attribute name="long_name" value="grid cell centers, latitude-coordinate"/>
+        <attribute name="units" value="degrees_north"/>
+        <attribute name="axis" value="Y"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="18.149999618530273 30.75"/>
+        <attribute name="delft3d_name"
+            value="map-const:YZ map-const:KCS map-const:YWAT map-const:CODW map-const:COORDINATES"/>
+        <!--        <attribute name="bounds" value="grid_latitude" /> -->
+        <remove type="attribute" name="bounds"/>
+    </variable>
+    <variable name="depth" shape="m n" type="float">
+        
+        <attribute name="standard_name" value="sea_floor_depth_below_sea_level"/>
+        <attribute name="long_name" value="depth of cell centers"/>
+        <attribute name="units" value="m"/>
+
+        <attribute name="coordinates" value="latitude longitude"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="-7146.62353515625 67.0625"/>
+        <attribute name="delft3d_name" value="map-const:DPS0 map-const:KCS"/>
+        <attribute name="comment" value=""/>
+        <remove type="attribute" name="positive"/>
+    </variable>
+    <variable name="zactive" shape="m n" type="float">
+        
+        <attribute name="long_name" value="active water-level point"/>
+        <attribute name="units" value="1"/>
+        <attribute name="coordinates" value="latitude longitude"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="0.0 1.0"/>
+        <attribute name="delft3d_name" value="map-const:KCS"/>
+    </variable>
+    <variable name="area" shape="m n" type="float">
+        
+        <attribute name="standard_name" value="cell_area"/>
+        <attribute name="long_name" value="area of grid cells"/>
+        <attribute name="units" value="degrees2"/>
+        <attribute name="coordinates" value="latitude longitude"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double"
+            value="0.009999694826547056 0.010000648500863463"/>
+        <attribute name="delft3d_name" value="map-const:GSQS map-const:KCS"/>
+        <attribute name="comment"
+            value="This is the exact area spanned geometrically by the 4 corner points. This is not identical to the area GSQS used internally in Delft3D for mass-conservation!"
+        />
+    </variable>
+    <variable name="waterlevel" shape="time m n" type="float">
+                <attribute name="standard_name" value="sea_surface_height"/>
+        <attribute name="long_name" value="water level"/>
+        <attribute name="units" value="m"/>
+
+        <attribute name="coordinates" value="latitude longitude"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="-2.1335089206695557 67.0625"/>
+        <attribute name="cell_methods" value="time: point             "/>
+        <attribute name="delft3d_name" value="map-series:S1 map-const:KCS"/>
+        <remove type="attribute" name="positive"/>
+    </variable>
+    <variable name="velocity_x" shape="time Layer m n" type="float">
+        
+        <attribute name="standard_name" value="eastward_sea_water_velocity"/>
+        <attribute name="long_name" value="velocity, lon-component"/>
+        <attribute name="units" value="m/s"/>
+        <attribute name="coordinates" value="latitude longitude"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="-2.641201972961426 1.032794177532196"/>
+        <attribute name="cell_methods" value="time: point             "/>
+        <attribute name="delft3d_name"
+            value="map-series:U1 map-series:V1 map-const:ALFAS map-const:KCU map-const:KCV map-const:KFU map-const:KFV map-const:KCS"
+        />
+    </variable>
+    <variable name="velocity_y" shape="time Layer m n" type="float">
+        
+        <attribute name="standard_name" value="northward_sea_water_velocity"/>
+        <attribute name="long_name" value="velocity, lat-component"/>
+        <attribute name="units" value="m/s"/>
+        <attribute name="coordinates" value="latitude longitude"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="-1.5238654017448425 6.197527885437012"/>
+        <attribute name="cell_methods" value="time: point             "/>
+        <attribute name="delft3d_name"
+            value="map-series:U1 map-series:V1 map-const:ALFAS map-const:KCU map-const:KCV map-const:KFU map-const:KFV map-const:KCS"
+        />
+    </variable>
+    <variable name="tau_x" shape="time m n" type="float">
+        
+        <attribute name="standard_name" value="surface_downward_northward_stress"/>
+        <attribute name="long_name" value="bed shear stress, x-component"/>
+        <attribute name="units" value="N/m2"/>
+        <attribute name="coordinates" value="latitude longitude"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="-93.80084991455078 157.3847198486328"/>
+        <attribute name="cell_methods" value="time: point             "/>
+        <attribute name="delft3d_name"
+            value="map-series:TAUKSI map-const:TAUETA map-const:ALFAS map-const:KCS"/>
+    </variable>
+    <variable name="tau_y" shape="time m n" type="float">
+        
+        <attribute name="standard_name" value="surface_downward_eastward_stress"/>
+        <attribute name="long_name" value="bed shear stress, y-component"/>
+        <attribute name="units" value="N/m2"/>
+        <attribute name="coordinates" value="latitude longitude"/>
+        <attribute name="_FillValue" type="float" value="NaN"/>
+        <attribute name="missing_value" type="float" value="NaN"/>
+        <attribute name="actual_range" type="double" value="-2561.92041015625 373.8990173339844"/>
+        <attribute name="cell_methods" value="time: point             "/>
+        <attribute name="delft3d_name"
+            value="map-series:TAUKSI map-const:TAUETA map-const:ALFAS map-const:KCS"/>
+    </variable>
+</netcdf>

@@ -1,0 +1,10 @@
+in relevant project directory:
+    cb_hypoxia
+    gom_hypoxia
+    pr_inundation_tropical 
+
+create (if necessary) your OGRANIZATION_MODEL directory
+
+eg.
+
+cd pr_inundation_tropical

@@ -33,6 +33,7 @@
  <variable name="wlv">
   <attribute name="mesh" value="ww3_mesh"/>
   <attribute name="location" value="node"/>
+  <attribute name="standard_name" value="sea_surface_height_above_geoid"/>
   <attribute name="coordinates" value="time latitude longitude"/>
  </variable>
  <variable name="U10">

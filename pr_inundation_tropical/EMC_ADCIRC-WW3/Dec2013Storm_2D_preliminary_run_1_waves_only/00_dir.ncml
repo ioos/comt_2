@@ -3,7 +3,7 @@
  <variable name="ww3_mesh" shape="" type="int">
   <attribute name="cf_role" value="mesh_topology"/>
   <attribute name="topology_dimension" type="int" value="2"/>
-  <attribute name="node_coordinates" value="lon lat"/>
+  <attribute name="node_coordinates" value="longitude latitude"/>
   <attribute name="face_node_connectivity" value="tri"/>
  </variable>
  <variable name="tri">

@@ -195,7 +195,7 @@
         />
     </variable>
     <variable name="waterlevel" shape="time m n" type="float">
-                <attribute name="standard_name" value="sea_surface_height"/>
+                <attribute name="standard_name" value="sea_surface_height_above_geoid"/>
         <attribute name="long_name" value="water level"/>
         <attribute name="units" value="m"/>
 

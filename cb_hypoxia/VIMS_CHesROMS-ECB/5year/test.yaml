@@ -1,42 +1,40 @@
 dataset:
-    id: "USGS_COAWST_MVCO_CBLAST_Ripples_SWAN_40m"
+    id: "VIMS-ChesROMS-ECB"
 
-    title: "USGS-CMG-COAWST Model: CBLAST2007 Ripples with SWAN-40m res"
+    title: "VIMS-ChesROMS-ECB"
 
     summary: "Simulation of hydrodynamics and bottom stress south of Marthas Vineyard, MA using the COAWST modeling system.  These results are from the 40m inner nest of a four-level nested simulation."
 
-    naming_authority: "gov.usgs.cmg"
+    naming_authority: "org.sura.comt"
 
     project:
-        - CMG_Portal
-        - Sandy_Portal
+        - COMT
 
     creator:
-        email: nganju@usgs.gov
-        name: Neil Ganju
-        url: http://water.usgs.gov/fluxes
+        email: marjy@vims.edu
+        name: Marjy Friedrichs
+        url: http://www.vims.edu/people/friedrichs_ma/
 
     publisher:
-        email: tkalra@usgs.gov
-        name: Tarandeep Kalra
-        url: http://www.usgs.gov
+        email: marjy@vims.edu
+        name: Marjy Friedrichs
+        url: http://www.vims.edu/people/friedrichs_ma/
 
     contributor:
         role: advisor
-        email: rsignell@usgs.gov
-        name: Rich Signell
-        url: http://profile.usgs.gov/rsignell
+        email: marjy@vims.edu
+        name: Marjy Friedrichs
+        url: http://www.vims.edu/people/friedrichs_ma/
 
 
-    license: "The data may be used and redistributed for free but is not intended for legal use, since it may contain inaccuracies. Neither the data Contributor, nor the United States Government, nor any of their employees or contractors, makes any warranty, express or implied, including warranties of merchantability and fitness for a particular purpose, or assumes any legal liability for the accuracy, completeness, or usefulness, of this information."
+    license: "The data may be used and redistributed for free but is not intended for legal use, since it may contain inaccuracies. "
 
     references:
-        - http://www.whoi.edu/science/AOPE/dept/CBLASTmain.html
-        - http://water.usgs.gov/fluxes/mvco.html
-        - doi:10.1029/2011JC007035
+        - http://testbed.sura.org
+#        - doi:10.1029/2011JC007035
 
     acknowledgements:
-        - USGS-CMGP
+        - COMT
         - NSF
 
 variables:
@@ -48,6 +46,6 @@ variables:
 
 aggregation:
     time_var: ocean_time
-    dir: Output/
+    dir: Output
     sample_file: fengjgr2015.nc
-    pattern: .*\fengjgr2015\.nc$
+    pattern: .*fengjgr2015\.nc$

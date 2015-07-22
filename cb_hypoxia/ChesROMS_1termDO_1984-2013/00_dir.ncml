@@ -9,15 +9,16 @@
   <attribute name="creator_email" type="String" value="mscully@whoi.edu"/>
   <attribute name="creator_url" type="String" value="https://www.whoi.edu/more.go?username=mscully"/>
   <attribute name="creator_name" type="String" value="Malcolm Scully"/>
-  <attribute name="title" type="String" value="WHOI-Chesapeake-1_term"/>
-  <attribute name="summary" type="String" value="Chesapeake Bay 1_term DO model "/>
+  <attribute name="title" type="String" value="WHOI-ROMS-Chesapeake-1_term"/>
+  <attribute name="summary" type="String" value="WHOI ROMS Chesapeake Bay one-term DO model"/>
   <attribute name="project" type="String" value="COMT"/>
+  <attribute name="references" type="String" value="http://testbed.sura.org"/>
   <attribute name="contributor_role" type="String" value="advisor"/>
   <attribute name="contributor_email" type="String" value="marjy@vims.edu"/>
   <attribute name="contributor_url" type="String" value="http://www.vims.edu/people/friedrichs_ma/"/>
   <attribute name="contributor_name" type="String" value="Marjy Friedrichs"/>
-  <attribute name="id" type="String" value="WHOI_Chesapeake_1_term"/>
-  <attribute name="naming_authority" type="String" value="edu.whoi"/>
+  <attribute name="id" type="String" value="WHOI-ROMS_Chesapeake_1_term"/>
+  <attribute name="naming_authority" type="String" value="org.sura.comt"/>
 
 <variable name="ocean_time">
   <attribute name="standard_name" type="String" value="time"/>

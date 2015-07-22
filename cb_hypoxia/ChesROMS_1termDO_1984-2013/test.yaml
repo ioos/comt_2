@@ -1,11 +1,11 @@
 dataset:
-    id: "WHOI_Chesapeake_1_term"
+    id: "WHOI-ROMS_Chesapeake_1_term"
 
-    title: "WHOI-Chesapeake-1_term"
+    title: "WHOI-ROMS-Chesapeake-1_term"
 
-    summary: "Chesapeake Bay 1_term DO model "
+    summary: "WHOI ROMS Chesapeake Bay one-term DO model"
 
-    naming_authority: "edu.whoi"
+    naming_authority: "org.sura.comt"
 
     project:
         - COMT
@@ -13,23 +13,23 @@ dataset:
     creator:
         email: mscully@whoi.edu
         name: Malcolm Scully
-        url: https://www.whoi.edu/more.go?username=mscully
+        url: "https://www.whoi.edu/more.go?username=mscully"
 
     publisher:
         email: mscully@whoi.edu
         name: Malcolm Scully
-        url: https://www.whoi.edu/more.go?username=mscully
+        url: "https://www.whoi.edu/more.go?username=mscully"
 
     contributor:
         role: advisor
         email: marjy@vims.edu
         name: Marjy Friedrichs
-        url: http://www.vims.edu/people/friedrichs_ma/
+        url: "http://www.vims.edu/people/friedrichs_ma/"
 
-    license: "The data may be used and redistributed for free but is not intended for legal use, since it may contain inaccuracies."
+    license: "The data may be used and redistributed for free but is not intended for legal use, since it may contain inaccuracies." 
 
-#    references:
-#        - http://www.whoi.edu/science/AOPE/dept/CBLASTmain.html
+    references:
+         - http://testbed.sura.org
 #        - http://water.usgs.gov/fluxes/mvco.html
 #        - doi:10.1029/2011JC007035
 

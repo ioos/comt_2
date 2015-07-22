@@ -1,0 +1,51 @@
+dataset:
+    id: "WHOI_Chesapeake_1_term"
+
+    title: "WHOI-Chesapeake-1_term"
+
+    summary: "Chesapeake Bay 1_term DO model "
+
+    naming_authority: "edu.whoi"
+
+    project:
+        - COMT
+
+    creator:
+        email: mscully@whoi.edu
+        name: Malcolm Scully
+        url: https://www.whoi.edu/more.go?username=mscully
+
+    publisher:
+        email: mscully@whoi.edu
+        name: Malcolm Scully
+        url: https://www.whoi.edu/more.go?username=mscully
+
+    contributor:
+        role: advisor
+        email: marjy@vims.edu
+        name: Marjy Friedrichs
+        url: http://www.vims.edu/people/friedrichs_ma/
+
+    license: "The data may be used and redistributed for free but is not intended for legal use, since it may contain inaccuracies."
+
+#    references:
+#        - http://www.whoi.edu/science/AOPE/dept/CBLASTmain.html
+#        - http://water.usgs.gov/fluxes/mvco.html
+#        - doi:10.1029/2011JC007035
+
+    acknowledgements:
+        - COMT
+        - NSF
+
+variables:
+    include:
+        - All
+
+    exclude:
+        - None
+
+aggregation:
+    time_var: ocean_time
+    dir: Output
+    sample_file: chesapeake_NARR_2012_his_const1p1_1e5_0013.nc
+    pattern: .*his.*\.nc$

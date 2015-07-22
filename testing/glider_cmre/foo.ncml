@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<netcdf xmlns="http://www.unidata.ucar.edu/namespaces/netcdf/ncml-2.2" location="GL-20140621-elettra-MEDREP14depl005-grid-R.nc">
+  <dimension name="ctd2Profile" length="36" />
+  <dimension name="ctd2Depth" length="170" />
+  <dimension name="ctdProfile" length="36" />
+  <dimension name="ctdDepth" length="170" />
+    <dimension name="trajectory_strlen" length="18" />
+  <attribute name="history" value="2014-06-23 16:45:18: File created" />
+  <attribute name="data_type" value="Glider profiles data" />
+  <attribute name="featureType" value="TrajectoryProfile" />
+  <attribute name="cdm_data_type" value="TrajectoryProfile" />
+  <attribute name="disclaimer" value="The processing software that generated this dataset is under development. STO-CMRE data are released without any warranty, either express or implied, and timely delivery of data and products is not guaranteed. It has been released for limited use with appropiate caution. For near real-time data, only limited quality controls are performed. STO-CMRE data are intended to be research-quality, but it is possible that the data contain errors. It is the sole responsibility of the user to assess if the data are appropriate for their use, and to interpret it accordingly. The user assumes all risk arising from their use of STO-CMRE data. STO-CMRE welcomes users to ask questions and report problems to the contact addresses listed in the data files. " />
+  <attribute name="product_description" value="This file contains a glider data product derived from processed data. Trajectory data are transformed into instantaneous vertical profiles, regularly sampled in the vertical axis, in such a way that all observations in one profile share the same latitude, longitude and time. Similarly, the same depth levels (regularly spaced) are used for all profiles. Different grid coordinates are setup for different sensors to cope with different sampling strategies. These coordinates include latitude, longitude and depth." />
+  <attribute name="date_update" value="2014-06-23T16:45:18Z" />
+  <attribute name="format_version" value="0.99" />
+  <attribute name="netcdf_version" value="3.6" />
+  <attribute name="source" value="Glider observation" />
+  <attribute name="data_mode" value="R" />
+  <attribute name="update_interval" value="hourly" />
+  <attribute name="quality_index" type="double" value="0.0" />
+  <attribute name="qc_manual" value="http://www.groom.org/data/quality_control_manual.pdf" />
+  <attribute name="Conventions" value="CF-1.6" />
+  <attribute name="data_classification" value="NATO Unclassified" />
+  <attribute name="title" value="MEDREP14" />
+  <attribute name="type" value="Glider data file" />
+  <attribute name="references" value="http://geos3.cmre.nato.int/REP14" />
+  <attribute name="provider" value="STO-CMRE (NATO Science &amp; Technology Organization - Centre for Maritime Research and Experimentation)" />
+  <attribute name="summary" value="MEDREP14 glider data" />
+  <attribute name="project_name" value="MEDREP14" />
+  <attribute name="pi_name" value="R. Onken" />
+  <attribute name="cruise" value="MEDREP14" />
+  <attribute name="mission" value="depl005" />
+  <attribute name="processing" value="real time" />
+  <attribute name="platform_code" value="elettra" />
+  <attribute name="trans_system" value="IRIDIUM" />
+  <attribute name="positioning_system" value="GPS" />
+  <attribute name="platform_model" value="WEBB SLOCUM" />
+  <attribute name="platform_maker" value="Teledyne Webb Research Corporation" />
+  <attribute name="anomaly" value="none" />
+  <attribute name="sensors_ctd_name" value="pumpedCTD" />
+  <attribute name="sensors_ctd_manufacturer" value="Seabird" />
+  <attribute name="sensors_ctd_model" value="Slocum Glider CTD" />
+  <attribute name="sensors_ctd_serial_number" type="double" value="48.0" />
+  <attribute name="launch_date" value="09-Jun-2014 10:00:00" />
+  <attribute name="launch_latitude" type="double" value="39.95377358472466" />
+  <attribute name="launch_longitude" type="double" value="7.343931816812265" />
+  <attribute name="launch_qc" type="double" value="0.0" />
+  <attribute name="institution" value="STO-CMRE" />
+  <attribute name="institution_reference" value="http://www.cmre.nato.int/" />
+  <attribute name="contact" value="http://www.cmre.nato.int/" />
+  <attribute name="distribution_statement" value="NATO UNCLASSIFIED releasable to project partner only" />
+  <attribute name="qcCodes" value="0: no quality control performed on that value; 1: good value (GPS fix); 2: probably good value (not used here); 3: Bad value but correctable (not used here); 4: Bad value; 5: Changed value (not used here); 6: not used here; 7: not used here; 8: Interpolated value (estimated values); 9: Missing value (NaN); A: Incomplete info (not used here);" />
+  <attribute name="time_coverage_start" value="2014-06-21T09:28:56Z" />
+  <attribute name="time_coverage_end" value="2014-06-23T09:55:13Z" />
+  <attribute name="geospatial_lat_min" type="double" value="39.85476392857142" />
+  <attribute name="geospatial_lat_max" type="double" value="39.95881814242291" />
+  <attribute name="geospatial_lon_min" type="double" value="7.307335703865315" />
+  <attribute name="geospatial_lon_max" type="double" value="7.442076190476191" />
+  <attribute name="geospatial_vertical_min" type="double" value="0.0" />
+  <attribute name="geospatial_vertical_max" type="double" value="173.0" />
+    <variable name="ctd2_profile_id" shape="ctd2Profile" type="short">
+    <attribute name="_FillValue" type="short" value="-1" />
+    <attribute name="actual_range" type="int" value="1 3294" />
+    <attribute name="cf_role" value="profile_id" />
+    <values start="1" increment="1"/>
+    <attribute name="comment" value="Sequential profile number within the trajectory.  This value is unique in each file that is part of a single trajectory/deployment." />
+    <attribute name="ioos_category" value="Identifier" />
+    <attribute name="long_name" value="Profile ID" />
+    <attribute name="valid_max" type="int" value="2147483647" />
+    <attribute name="valid_min" type="int" value="1" />
+  </variable>
+  <variable name="ctd2_latitude" shape="ctd2Profile" type="double">
+    <attribute name="long_name" value="latitude" />
+    <attribute name="standard_name" value="latitude" />
+    <attribute name="units" value="degree_north" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+    <attribute name="reference" value="WGS84" />
+    <attribute name="coordinate_reference_frame" value="um:ogc:crs:EPSG:4326" />
+  </variable>
+  <variable name="ctd2_longitude" shape="ctd2Profile" type="double">
+    <attribute name="long_name" value="longitude" />
+    <attribute name="standard_name" value="longitude" />
+    <attribute name="units" value="degree_east" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+    <attribute name="reference" value="WGS84" />
+    <attribute name="coordinate_reference_frame" value="um:ogc:crs:EPSG:4326" />
+  </variable>
+  <variable name="ctd2_distance" shape="ctd2Profile" type="double">
+    <attribute name="long_name" value="distance flown since mission start" />
+    <attribute name="proposed_standard_name" value="platform_travelled_distance" />
+    <attribute name="units" value="km" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd2_time" shape="ctd2Profile" type="double">
+    <attribute name="long_name" value="epoch time" />
+    <attribute name="standard_name" value="time" />
+    <attribute name="units" value="seconds since 1970-01-01 00:00:00" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd2_profileDir" shape="ctd2Profile" type="char">
+    <attribute name="long_name" value="profile direction" />
+    <attribute name="proposed_standard_name" value="platform_profile_direction" />
+    <attribute name="units" value="1" />
+    <attribute name="_FillValue" value="N" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+    <attribute name="values" value="A: ascending; D: descending; S: stalled" />
+  </variable>
+  <variable name="ctd2_depth" shape="ctd2Depth" type="double">
+    <attribute name="long_name" value="glider depth" />
+    <attribute name="standard_name" value="depth" />
+    <attribute name="units" value="m" />
+    <attribute name="positive" value="down"/>
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd_latitude" shape="ctdProfile" type="double">
+    <attribute name="long_name" value="latitude" />
+    <attribute name="standard_name" value="latitude" />
+    <attribute name="units" value="degree_north" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+    <attribute name="reference" value="WGS84" />
+    <attribute name="coordinate_reference_frame" value="um:ogc:crs:EPSG:4326" />
+  </variable>
+  <variable name="ctd_longitude" shape="ctdProfile" type="double">
+    <attribute name="long_name" value="longitude" />
+    <attribute name="standard_name" value="longitude" />
+    <attribute name="units" value="degree_east" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+    <attribute name="reference" value="WGS84" />
+    <attribute name="coordinate_reference_frame" value="um:ogc:crs:EPSG:4326" />
+  </variable>
+  <variable name="ctd_distance" shape="ctdProfile" type="double">
+    <attribute name="long_name" value="distance flown since mission start" />
+    <attribute name="proposed_standard_name" value="platform_travelled_distance" />
+    <attribute name="units" value="km" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd_time" shape="ctdProfile" type="double">
+    <attribute name="long_name" value="epoch time" />
+    <attribute name="standard_name" value="time" />
+    <attribute name="units" value="seconds since 1970-01-01 00:00:00" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd_profileDir" shape="ctdProfile" type="char">
+    <attribute name="long_name" value="profile direction" />
+    <attribute name="proposed_standard_name" value="platform_profile_direction" />
+    <attribute name="units" value="1" />
+    <attribute name="_FillValue" value="N" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+    <attribute name="values" value="A: ascending; D: descending; S: stalled" />
+  </variable>
+  <variable name="ctd_depth" shape="ctdDepth" type="double">
+    <attribute name="long_name" value="glider depth" />
+    <attribute name="positive" value="down" />
+    <attribute name="standard_name" value="depth" />
+    <attribute name="units" value="m" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd2_cond" shape="ctd2Profile ctd2Depth" type="double">
+    <attribute name="long_name" value="water conductivity" />
+    <attribute name="standard_name" value="sea_water_electrical_conductivity" />
+    <attribute name="units" value="S m-1" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd2_pden" shape="ctd2Profile ctd2Depth" type="double">
+    <attribute name="long_name" value="water potential density" />
+    <attribute name="standard_name" value="sea_water_potential_density" />
+    <attribute name="units" value="Kg m-3" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd2_pres" shape="ctd2Profile ctd2Depth" type="double">
+    <attribute name="long_name" value="water pressure" />
+    <attribute name="standard_name" value="pressure" />
+    <attribute name="units" value="bar" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd2_ptmp" shape="ctd2Profile ctd2Depth" type="double">
+    <attribute name="long_name" value="water potential temperature" />
+    <attribute name="standard_name" value="sea_water_potential_temperature" />
+    <attribute name="units" value="Celsius" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd2_salt" shape="ctd2Profile ctd2Depth" type="double">
+    <attribute name="long_name" value="water salinity" />
+    <attribute name="standard_name" value="sea_water_salinity" />
+    <attribute name="coordinates" value="ctd2_time ctd2_depth ctd2_longitude ctd2_latitude" />
+    <attribute name="units" value="1e-3" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd2_svel" shape="ctd2Profile ctd2Depth" type="double">
+    <attribute name="long_name" value="sound velocity" />
+    <attribute name="standard_name" value="sea_water_sound_velocity" />
+    <attribute name="units" value="m s-1" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd2_temp" shape="ctd2Profile ctd2Depth" type="double">
+    <attribute name="long_name" value="water temperature" />
+    <attribute name="standard_name" value="sea_water_temperature" />
+    <attribute name="units" value="Celsius" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd_cond" shape="ctdProfile ctdDepth" type="double">
+    <attribute name="long_name" value="water conductivity" />
+    <attribute name="standard_name" value="sea_water_electrical_conductivity" />
+    <attribute name="units" value="S m-1" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd_pden" shape="ctdProfile ctdDepth" type="double">
+    <attribute name="long_name" value="water potential density" />
+    <attribute name="standard_name" value="sea_water_potential_density" />
+    <attribute name="units" value="Kg m-3" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd_pres" shape="ctdProfile ctdDepth" type="double">
+    <attribute name="long_name" value="water pressure" />
+    <attribute name="standard_name" value="pressure" />
+    <attribute name="units" value="bar" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd_ptmp" shape="ctdProfile ctdDepth" type="double">
+    <attribute name="long_name" value="water potential temperature" />
+    <attribute name="standard_name" value="sea_water_potential_temperature" />
+    <attribute name="units" value="Celsius" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd_salt" shape="ctdProfile ctdDepth" type="double">
+    <attribute name="long_name" value="water salinity" />
+    <attribute name="standard_name" value="sea_water_salinity" />
+    <attribute name="coordinates" value="ctd_time ctd_depth ctd_longitude ctd_latitude" />
+    <attribute name="units" value="1e-3" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd_svel" shape="ctdProfile ctdDepth" type="double">
+    <attribute name="long_name" value="sound velocity" />
+    <attribute name="standard_name" value="sea_water_sound_velocity" />
+    <attribute name="units" value="m s-1" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+  <variable name="ctd_temp" shape="ctdProfile ctdDepth" type="double">
+    <attribute name="long_name" value="water temperature" />
+    <attribute name="standard_name" value="sea_water_temperature" />
+    <attribute name="units" value="Celsius" />
+    <attribute name="_FillValue" type="double" value="-1000000.0" />
+    <attribute name="QC_indicator" type="double" value="0.0" />
+  </variable>
+</netcdf>
+

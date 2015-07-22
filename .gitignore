@@ -1,6 +1,8 @@
-*.nc
-*.tgz
-*.tar
-*.tar.gz
-*.zip
-*.tar.bz2
+*
+!*/
+!*.ncml
+!*.yaml
+!*.doc
+!*.docx
+!*.csv
+!README.txt

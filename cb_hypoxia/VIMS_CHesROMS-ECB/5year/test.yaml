@@ -3,7 +3,7 @@ dataset:
 
     title: "VIMS-ChesROMS-ECB"
 
-    summary: "Simulation of hydrodynamics and bottom stress south of Marthas Vineyard, MA using the COAWST modeling system.  These results are from the 40m inner nest of a four-level nested simulation."
+    summary: "Five year (2001-2005) simulation of Chesapeake Bay hydrodynamics+biogeochemistry, as published in Feng et al., JGR-BGS, 2015."
 
     naming_authority: "org.sura.comt"
 
@@ -35,7 +35,7 @@ dataset:
 
     acknowledgements:
         - COMT
-        - NSF
+        - NASA
 
 variables:
     include:
